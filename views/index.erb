@@ -4,23 +4,28 @@
 <html>
 <body>
 <link rel='stylesheet' href='style.css'> 
-  <div class = "main_slider" style= "text-align:center">
+  <div class = "main">
   <h1> Battle Time </h1>
-  <h2> Sign in to play: </h2>
+  <h2 class = 'header'> Sign in to play: </h2>
   <form action='/names' method='post'>
     <label for='player1'>
-    <strong> Player 1 </strong>
+    <strong class='player1'> Player 1 </strong>
     <input type='text' name = 'player1'>
     </label>
     <br>
     <label for='player2'>
-    <strong> Player 2 </strong>
-    <input type='text' name = 'player2'>
+    <strong class="player2"> Player 2 </strong>
+    <input class="box" type='text' name = 'player2'>
     </label>
     <br>
     <br>
-    <input type='submit' value = 'Submit'>
+    <input class='button' type='submit' value = 'Submit'>
   </form>
+  </div>
 </div>
+
+<div class="image">
+</div>
+
 </body>
 </html>
