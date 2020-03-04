@@ -4,9 +4,9 @@
 <link rel='stylesheet' href='style.css' href="/attack" > 
 <div class='main'>
 <h1> <%= @player_1.name %> vs. <%= @player_2.name %> </h1>
-<h2> <%= @player_1.name %> <%= @player_1.hp %>hp</h2>
-<h2> <%= @player_2.name %> <%= @player_2.hp %>hp</h2>
-<a href="/attack">
+<h2> <%= @player_1.name %>: <strong class='hpcol' ><%= @player_1.hp %>hp</strong></h2>
+<h2> <%= @player_2.name %>: <strong class='hpcol' ><%= @player_2.hp %>hp</strong></h2>
+<a class="buttonpos" href="/attack">
   <img class='attack' src='Png.png'>
 </a>
 
