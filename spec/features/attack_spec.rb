@@ -12,4 +12,12 @@ feature "attack" do
     expect(page).to have_content "Mittens's hp reduced by 10"
   end
 
+  scenario "reduce p1s hp by 10" do 
+    sign_in_and_play
+    click_link
+    click_link "OK"
+    click_link
+    expect(page).not_to have_content "Mittens's hp reduced by 10"
+    expect(page).to have_content "Dave's hp reduced by 10"
+  end
 end

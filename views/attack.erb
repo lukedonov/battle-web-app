@@ -4,9 +4,9 @@
       <link rel='stylesheet' href='style.css'> 
       <div class='main'></div>
        <h2 class='text'>
-       <%= @game.player1.name%> attacked <%= @game.player2.name%>
+       <%= @current_attacker%> attacked <%= @current_victim%>
       <br>
-       <%= @game.player2.name%>'s hp reduced by 10
+       <%= @current_victim%>'s hp reduced by 10
       <br>
       <a href="/play">OK</a>
       </h2>

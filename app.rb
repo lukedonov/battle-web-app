@@ -17,14 +17,17 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+    @player1 = $game.current_attacker
+    @player2 = $game.current_victim
     @game = $game
-    p session
     erb :play
   end
 
   get '/attack' do
     @game = $game
-    @game.attack(@game.player2)
+    @current_victim = $game.current_victim.name
+    @current_attacker = $game.current_attacker.name
+    @game.attack(@game.current_victim)
     erb :attack
   end
 
