@@ -3,9 +3,9 @@
 <body>
 <link rel='stylesheet' href='style.css' href="/attack" > 
 <div class='main'>
-<h1> <%= @player_1.name %> vs. <%= @player_2.name %> </h1>
-<h2> <%= @player_1.name %>: <strong class='hpcol' ><%= @player_1.hp %>hp</strong></h2>
-<h2> <%= @player_2.name %>: <strong class='hpcol' ><%= @player_2.hp %>hp</strong></h2>
+<h1> <%= @game.player1.name %> vs. <%= @game.player2.name %> </h1>
+<h2> <%= @game.player1.name %>: <strong class='hpcol' ><%= @game.player1.hp %>hp</strong></h2>
+<h2> <%= @game.player2.name %>: <strong class='hpcol' ><%= @game.player2.hp %>hp</strong></h2>
 <a class="buttonpos" href="/attack">
   <img class='attack' src='Png.png'>
 </a>
