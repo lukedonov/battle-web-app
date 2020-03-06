@@ -7,12 +7,12 @@ feature 'Enter names' do
 
   scenario 'seeing hit points' do
     sign_in_and_play
-    expect(page).to have_content 'Dave: 100hp'
+    expect(page).to have_content 'Dave: 60hp'
   end
 
   scenario 'seeing hit points' do
     sign_in_and_play
-    expect(page).to have_content 'Mittens: 100hp'
+    expect(page).to have_content 'Mittens: 60hp'
   end
 
   # scenario "seeing turns" do 

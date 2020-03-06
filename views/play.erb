@@ -3,13 +3,20 @@
 <body>
 <link rel='stylesheet' href='style.css' href="/attack" > 
 <div class='main'>
-<h1> <%= @game.player1.name %> vs. <%= @game.player2.name %> </h1>
-<h2> <%= @game.player1.name %>: <strong class='hpcol' ><%= @game.player1.hp %>hp</strong></h2>
-<h2> <%= @game.player2.name %>: <strong class='hpcol' ><%= @game.player2.hp %>hp</strong></h2>
-<h3>It's <%= @game.current_turn.name%>'s turn</h3>
-<a class="buttonpos" href="/attack">
-  <img class='attack' src='Png.png'>
-</a>
+  <% if @game.current_turn.hp<= 0  %>
+        <h1><%= @game.current_turn.name %> Loses </h1>
+        <a class="buttonpos" href="/">
+          Play again
+        </a>
+        <% else %>
+        <h1> <%= @game.player1.name %> vs. <%= @game.player2.name %> </h1>
+        <h2> <%= @game.player1.name %>: <strong class='hpcol' ><%= @game.player1.hp %>hp</strong></h2>
+        <h2> <%= @game.player2.name %>: <strong class='hpcol' ><%= @game.player2.hp %>hp</strong></h2>
+        <h3>It's <%= @game.current_turn.name%>'s turn</h3>
+        <a class="buttonpos" href="/attack">
+          <img class='attack' src='Png.png'>
+        </a>
+  <% end %>
 </div>
 </body>
 </html>

@@ -4,6 +4,10 @@ describe Player do
 
   subject(:dave) {Player.new('Dave')}
   subject(:mittens) {Player.new('Mittens')}
+
+  before do
+    allow(Kernel).to receive(:rand).and_return(10)
+  end
   
   describe "#name" do
     it "returns its name" do
