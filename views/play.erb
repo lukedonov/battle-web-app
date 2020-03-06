@@ -6,6 +6,7 @@
 <h1> <%= @game.player1.name %> vs. <%= @game.player2.name %> </h1>
 <h2> <%= @game.player1.name %>: <strong class='hpcol' ><%= @game.player1.hp %>hp</strong></h2>
 <h2> <%= @game.player2.name %>: <strong class='hpcol' ><%= @game.player2.hp %>hp</strong></h2>
+<h3>It's <%= @game.current_turn.name%>'s turn</h3>
 <a class="buttonpos" href="/attack">
   <img class='attack' src='Png.png'>
 </a>

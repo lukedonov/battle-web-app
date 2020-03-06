@@ -1,39 +1,28 @@
 class Game
-  attr_reader :turn
+  attr_reader :current_turn
   def initialize(player1, player2)
     @players = [player1, player2]
-    @index = 1
+    @current_turn = player1
   end
-
+  
   def player1
-    @players[0]
+    @players.first
   end
-
+  
   def player2
-    @players[1]
+    @players.last
   end
-
-  def current_victim
-    @players[@index]
+  
+  def opponent_of(the_player)
+    @players.select { |player| player != the_player }.first
   end
-
-  def current_attacker
-     if @index == 1
-      @players[0]
-     elsif @index == 0
-      @players[1]
-     end
-    # @players[@index]
-
+  
+  def switch_turns
+    @current_turn = opponent_of(current_turn)
   end
 
   def attack(player)
     player.receive_damage
-    change_turn
   end
-
-  def change_turn
-    @index = 1 if @index == 0
-    @index = 0 if @index == 1
-  end
+  
 end

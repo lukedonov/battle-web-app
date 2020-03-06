@@ -14,4 +14,9 @@ feature 'Enter names' do
     sign_in_and_play
     expect(page).to have_content 'Mittens: 100hp'
   end
+
+  # scenario "seeing turns" do 
+  #   sign_in_and_play
+  #   expect(page).to have_content "It's Dave's turn!"
+  # end
 end
